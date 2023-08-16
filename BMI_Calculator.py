@@ -17,6 +17,9 @@ def calculate_bmi():
             result_label.config(text=result_string)
         except:
             result_label.config(text="Enter a valid number!")
+def reset_BMI():
+    my_entry.delete(0,"end")
+    my_entry2.delete(0,"end")
 #label
 my_label = Label(text="Enter Your Weight (kg)",font=("Arial", 10 ,"normal"))
 my_label.pack()
@@ -32,6 +35,9 @@ my_entry2.pack()
 #Calculate button
 my_button = Button(text="Calculate",command=calculate_bmi)
 my_button.pack()
+#Reset Button
+my_reset_button = Button(text="Reset",command=reset_BMI)
+my_reset_button.pack()
 #result label
 result_label = Label()
 result_label.pack()
